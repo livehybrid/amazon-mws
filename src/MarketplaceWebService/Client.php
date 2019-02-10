@@ -1444,6 +1444,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetReportId()) {
             $parameters['ReportId'] = $request->getReportId();
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1467,6 +1470,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
                 $parameters['ReportTypeList'.'.'.'Type'.'.'.($typeIndex + 1)] = $type;
             }
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1486,6 +1492,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetNextToken()) {
             $parameters['NextToken'] = $request->getNextToken();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -1512,6 +1521,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetAcknowledged()) {
             $parameters['Acknowledged'] = $request->getAcknowledged() ? 'true' : 'false';
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -1583,6 +1595,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['AvailableToDate'] =
                 $this->getFormattedTimestamp($request->getAvailableToDate());
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1602,6 +1617,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetNextToken()) {
             $parameters['NextToken'] = $request->getNextToken();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -1677,7 +1695,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetReportOptions()) {
             $parameters['ReportOptions'] = $request->getReportOptions();
         }
-
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
 
@@ -1713,6 +1733,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetSubmittedToDate()) {
             $parameters['SubmittedToDate'] =
                 $this->getFormattedTimestamp($request->getSubmittedToDate());
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -1757,6 +1780,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['RequestedToDate'] =
                 $this->getFormattedTimestamp($request->getRequestedToDate());
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1800,6 +1826,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
                 $parameters['ReportRequestIdList'.'.'.'Id'.'.'.($idIndex + 1)] = $id;
             }
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1819,6 +1848,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetFeedSubmissionId()) {
             $parameters['FeedSubmissionId'] = $request->getFeedSubmissionId();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
         if ($request->isSetMWSAuthToken()) {
             $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
@@ -1868,6 +1900,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['SubmittedToDate'] =
                 $this->getFormattedTimestamp($request->getSubmittedToDate());
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1914,6 +1949,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['RequestedToDate'] =
                 $this->getFormattedTimestamp($request->getRequestedToDate());
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1934,6 +1972,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetNextToken()) {
             $parameters['NextToken'] = $request->getNextToken();
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -1953,6 +1994,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetNextToken()) {
             $parameters['NextToken'] = $request->getNextToken();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -1980,6 +2024,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         if ($request->isSetScheduleDate()) {
             $parameters['ScheduleDate'] =
                 $this->getFormattedTimestamp($request->getScheduleDate());
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
@@ -2018,6 +2065,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             $parameters['RequestedToDate'] =
                 $this->getFormattedTimestamp($request->getRequestedToDate());
         }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
+        }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
@@ -2040,6 +2090,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
             foreach ($reportTypeList->getType() as $typeIndex => $type) {
                 $parameters['ReportTypeList'.'.'.'Type'.'.'.($typeIndex + 1)] = $type;
             }
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
         }
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
