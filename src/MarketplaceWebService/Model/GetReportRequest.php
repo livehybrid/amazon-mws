@@ -33,6 +33,7 @@ require_once 'MarketplaceWebService/Model.php';
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportId: string</li>
+ * <li>MWSAuthToken: string</li>
  *
  * </ul>
  */
@@ -49,6 +50,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportId: string</li>
+     * <li>MWSAuthToken: string</li>
      *
      * </ul>
      */
@@ -59,6 +61,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Report' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -255,5 +258,49 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
     public function isSetReport()
     {
         return !is_null($this->fields['Report']['FieldValue']);
+    }
+    /**
+     * Gets the value of the MWSAuthToken property.
+     *
+     * @return string MWSAuthToken
+     */
+    public function getMWSAuthToken()
+    {
+        return $this->fields['MWSAuthToken']['FieldValue'];
+    }
+
+    /**
+     * Sets the value of the MWSAuthToken property.
+     *
+     * @param string MWSAuthToken
+     * @return this instance
+     */
+    public function setMWSAuthToken($value)
+    {
+        $this->fields['MWSAuthToken']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Sets the value of the MWSAuthToken and returns this instance
+     *
+     * @param string $value MWSAuthToken
+     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     */
+    public function withMWSAuthToken($value)
+    {
+        $this->setMWSAuthToken($value);
+        return $this;
+    }
+
+
+    /**
+     * Checks if MWSAuthToken is set
+     *
+     * @return bool true if MWSAuthToken  is set
+     */
+    public function isSetMWSAuthToken()
+    {
+        return !is_null($this->fields['MWSAuthToken']['FieldValue']);
     }
 }
