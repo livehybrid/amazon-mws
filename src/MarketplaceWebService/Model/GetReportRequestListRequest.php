@@ -32,6 +32,7 @@ require_once 'MarketplaceWebService/Model.php';
  *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
+ * <li>MWSAuthToken: string</li>
  * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
  * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
  * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
@@ -53,6 +54,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
+     * <li>MWSAuthToken: string</li>
      * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
      * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
      * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
@@ -67,6 +69,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
         $this->fields = array(
             'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
             'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
             'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_StatusList'),
@@ -453,5 +456,49 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
     public function isSetRequestedToDate()
     {
         return !is_null($this->fields['RequestedToDate']['FieldValue']);
+    }
+    /**
+     * Gets the value of the MWSAuthToken property.
+     *
+     * @return string MWSAuthToken
+     */
+    public function getMWSAuthToken()
+    {
+        return $this->fields['MWSAuthToken']['FieldValue'];
+    }
+
+    /**
+     * Sets the value of the MWSAuthToken property.
+     *
+     * @param string MWSAuthToken
+     * @return this instance
+     */
+    public function setMWSAuthToken($value)
+    {
+        $this->fields['MWSAuthToken']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Sets the value of the MWSAuthToken and returns this instance
+     *
+     * @param string $value MWSAuthToken
+     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     */
+    public function withMWSAuthToken($value)
+    {
+        $this->setMWSAuthToken($value);
+        return $this;
+    }
+
+
+    /**
+     * Checks if MWSAuthToken is set
+     *
+     * @return bool true if MWSAuthToken  is set
+     */
+    public function isSetMWSAuthToken()
+    {
+        return !is_null($this->fields['MWSAuthToken']['FieldValue']);
     }
 }
